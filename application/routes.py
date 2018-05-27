@@ -14,3 +14,7 @@ def login():
         print(request.form['username'], request.form['password'])
     return render_template('greeting.html',title="Fubartitel",user=user,navigation_bar=navigation_bar)
 #    return redirect(url_for('static',filename='somepage.html'))
+
+@app.route('/index')
+def index():
+    return render_template('index.html')
